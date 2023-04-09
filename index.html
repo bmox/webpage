@@ -71,6 +71,11 @@
 
         recognition.onerror = (event) => {
             console.error(event.error);
+            if (event.error === 'no-speech') {
+                // Ignore this error and keep the microphone running
+            } else {
+                // Handle other errors
+            }
         };
     </script>
 </body>
